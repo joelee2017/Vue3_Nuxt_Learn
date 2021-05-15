@@ -1,6 +1,12 @@
 <template>
   <div>
+    <header>
+      <h1>header</h1>
+    </header>
     <Nuxt />
+    <footer>
+      <h1>footer</h1>
+    </footer>
   </div>
 </template>
 
