@@ -1,5 +1,8 @@
 <template>
   <div>
+    <!-- 頁面，會自動產生route後會在自動渲染(ssr功能) -->
+    <!-- 共用畫面 -->
+    <!-- <Nuxt /> 類似於asp.net mvc layout renderbody -->
     <header>
       <h1>header</h1>
     </header>
