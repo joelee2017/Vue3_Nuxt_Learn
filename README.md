@@ -38,3 +38,14 @@ pages：頁面放的地方，一個 .vue 就是一個頁面
 plugins：自定義的nuxt套件的資料夾
 static：靜態資源，不需要被打包的資源
 store： Vuex所放的資料夾
+
+------
+
+Vue 進階篇 - Nuxt 生命週期表 Nuxt Lifecycle
+
+https://nuxtjs.org/docs/2.x/concepts/nuxt-lifecycle
+
+Nuxt  因為會有server端的關係，所以會跟原生的vue 生命週期有差異。
+
+![understanding-nuxt-2-12-lifecycle-hooks](https://nuxtjs.org/docs/2.x/nuxt-lifecycle.svg)
+
