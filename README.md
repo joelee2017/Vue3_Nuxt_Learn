@@ -67,7 +67,19 @@ asyncData會覆寫data一樣名稱的內容。
 
 ------
 
+Vue 進階篇 - GET API SSR實作
 
+若資料是必需在進到頁面前就拿到並渲染到畫面就必需在 asyncData在生命週期中執行，非同步執行。
+
+```js
+ async asyncData() {
+    const res = await axios.get('https://vue-lessons-api.herokuapp.com/photo/list');
+    // console.log(res);
+    return{
+      res: res.data
+    };
+  },
+```
 
 
 

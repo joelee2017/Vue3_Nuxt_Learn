@@ -1,9 +1,12 @@
 <script>
+import axios from 'axios';
 export default {
-   asyncData() {
+  async asyncData() {
     const name = 'joe';
+    const res = await axios.get('https://vue-lessons-api.herokuapp.com/photo/list');
+    // console.log(res);
     return{
-      name 
+      name, res: res.data
     };
   },
   data(){
@@ -25,6 +28,7 @@ export default {
       <h1 class="title" @click="handName">
         nuxt-test-joe - {{name}}
       </h1>
+      <img v-for="item in res" :key="item.url" :src="item.url">
       <div class="links">
         <a
           href="https://nuxtjs.org/"
