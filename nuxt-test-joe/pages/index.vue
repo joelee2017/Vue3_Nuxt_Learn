@@ -1,9 +1,29 @@
+<script>
+export default {
+   asyncData() {
+    const name = 'joe';
+    return{
+      name 
+    };
+  },
+  data(){
+    return {
+      name:'joe2'
+    }
+  },
+  methods:{
+    handName(){
+      this.name = 'joe3';
+    }
+  }
+}
+</script>
 <template>
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
-        nuxt-test-joe
+      <h1 class="title" @click="handName">
+        nuxt-test-joe - {{name}}
       </h1>
       <div class="links">
         <a
@@ -26,11 +46,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {}
-</script>
-
 <style>
 .container {
   margin: 0 auto;

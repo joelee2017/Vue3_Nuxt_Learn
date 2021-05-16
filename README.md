@@ -49,3 +49,25 @@ Nuxt  因為會有server端的關係，所以會跟原生的vue 生命週期有�
 
 ![understanding-nuxt-2-12-lifecycle-hooks](https://nuxtjs.org/docs/2.x/nuxt-lifecycle.svg)
 
+------
+
+Vue 進階篇 - asyncData重要事項
+
+為執行階段會提供的生點週期函式，網頁在被render到網頁之前，在server端執行的生命週期。
+
+要做非同步處理，取api資料時，要做seo，就能在asyncData中去打api打內容render出來
+
+asyncData在生命週期中只會執行一次。
+
+asyncData只會執行一次的關係，所以無法被vue其它功能所捕獲。
+
+asyncData中的內容，還要給程式其它內容使用的話，才會在data中命名一樣的物件。
+
+asyncData會覆寫data一樣名稱的內容。
+
+------
+
+
+
+
+
