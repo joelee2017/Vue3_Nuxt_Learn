@@ -106,6 +106,20 @@ asyncData會覆寫data一樣名稱的內容。
 
 ![image-20210517215046998](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20210517215046998.png)
 
+------
+
+### Vue 進階篇 - fetch的狀態處理-1
+
+改用 fetch  來取 api 資料
+
+------
+
+
+
+
+
+
+
 
 
 

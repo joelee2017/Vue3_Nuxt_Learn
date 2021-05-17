@@ -1,23 +1,27 @@
 <script>
 import axios from 'axios';
 export default {
-  async asyncData() {
-    const name = 'joe';
-    const res = await axios.get('https://vue-lessons-api.herokuapp.com/photo/list');
-    // console.log(res);
+  // async asyncData() {
+  //   const name = 'joe';
+  //   const res = await axios.get('https://vue-lessons-api.herokuapp.com/photo/list');
+  //   // console.log(res);
     
-    return{
-      name, res: res.data
-    };
-  },
+  //   return{
+  //     name, res: res.data
+  //   };
+  // },
   data(){
     return {
-      name:'joe2'
+      name:'joe2',
+      res:[]
     }
   },
-  fetch(){
+ async fetch(){
     console.log('fetch=>',this.name);
     this.name = 'joe fetch';
+    this.res = await axios.get('https://vue-lessons-api.herokuapp.com/photo/list')
+    .then(res =>res.data);
+
   },
   methods:{
     handName(){
