@@ -97,7 +97,14 @@ asyncData會覆寫data一樣名稱的內容。
 
 ------
 
+### Vue 進階篇 - Nuxt 生命週期-fetch
 
+-  asyncData  跟 fetch 都是在 server 端執行的。
+- 相較於 asyncData 只有在pages資料夾下的檔案才會執行 ，fetch 都可以執行。
+- fetch 是可以取得 this ，因為在生命週期 created 時vue實體就已經被建構了。
+- fetch 無法使用 return， 但可以使用覆寫。
+
+![image-20210517215046998](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20210517215046998.png)
 
 
 

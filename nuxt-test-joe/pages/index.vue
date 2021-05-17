@@ -5,6 +5,7 @@ export default {
     const name = 'joe';
     const res = await axios.get('https://vue-lessons-api.herokuapp.com/photo/list');
     // console.log(res);
+    
     return{
       name, res: res.data
     };
@@ -13,6 +14,10 @@ export default {
     return {
       name:'joe2'
     }
+  },
+  fetch(){
+    console.log('fetch=>',this.name);
+    this.name = 'joe fetch';
   },
   methods:{
     handName(){
