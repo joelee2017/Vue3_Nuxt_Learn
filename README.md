@@ -114,9 +114,18 @@ asyncData會覆寫data一樣名稱的內容。
 
 ------
 
+### Vue 進階篇 - fetch的狀態處理-2
 
+```js
+export default {
+  fetchOnServer: false
+}
+```
 
+- 如果把 fetchOnServer 設定成 false，那這樣fetch 就只會在 client 端被執行。
+- 等同於server 拿完資料，在讓 client 去執行渲染。
 
+------
 
 
 

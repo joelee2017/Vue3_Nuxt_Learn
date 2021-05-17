@@ -16,6 +16,7 @@ export default {
       res:[]
     }
   },
+ fetchOnServer: false,
  async fetch(){
     console.log('fetch=>',this.name);
     this.name = 'joe fetch';
