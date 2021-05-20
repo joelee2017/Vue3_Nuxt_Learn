@@ -20,7 +20,7 @@ export default {
  async fetch(){
     console.log('fetch=>',this.name);
     this.name = 'joe fetch';
-    this.res = await axios.get('https://vue-lessons-api.herokuapp.com/photo/list')
+    this.res = await axios.get('https://vue-lessons-api.herokuapp.com/photo/list?status=error')
     .then(res =>res.data);
 
   },
@@ -38,6 +38,9 @@ export default {
       <h1 class="title" @click="handName">
         nuxt-test-joe - {{name}}
       </h1>
+
+      <h1 v-if="$fetchState.pending">Loading...</h1>
+      <h1 v-if="$fetchState.error">ERROR {{$fetchState.error }}</h1>
       <img v-for="item in res" :key="item.url" :src="item.url">
       <div class="links">
         <a

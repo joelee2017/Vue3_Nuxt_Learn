@@ -127,6 +127,35 @@ export default {
 
 ------
 
+### Vue 進階篇 - fetch的狀態處理-3
+
+Fetch 提供的參數
+
+- $fetchState.pending ( true  |  false ) :  讓你在 client 端去判斷 API 載入完成沒有
+
+  ```vue
+    <h1 v-if="$fetchState.pending">Loading...</h1>
+  打資料時true ，回資料後false
+  ```
+
+- $fetchState.error ( null  |  { } ) : 當發生畫面上的內容發生錯誤的時候，去判斷錯誤的部分
+
+  ```vue
+    <h1 v-if="$fetchState.error">ERROR {{$fetchState.error }}</h1>
+  ```
+
+- $fetchState.timestamp (  Integer  ) : 顯示最後一次非同步處理的時間 
+
+
+
+------
+
+
+
+
+
+
+
 
 
 
