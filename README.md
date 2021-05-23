@@ -251,7 +251,13 @@ head() {
 
 ------
 
+### Vue 進階篇 - nuxt.config.js 設定 - ssr
 
+ssr　開關即在　nuxt.config.js　中加入　ssr:false　後重新建置產生的程式碼就只有 client 。
+
+關閉後產生的程式就是 spa 。
+
+------
 
 
 
