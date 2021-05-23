@@ -10,6 +10,18 @@ export default {
   //     name, res: res.data
   //   };
   // },
+  asyncData() {
+    console.log(1,"asyncData");
+  },
+  beforeCreate(){
+    console.log(2,"beforeCreate");
+  },
+  created(){
+    console.log(3,"created");
+  },
+  mounted (){
+    console.log(5,"mounted");
+  },
   data(){
     return {
       name:'joe2',
