@@ -211,13 +211,45 @@ server 端也是 beforeCreate 跟 created 階段的，並且在 client 端還會
 
 ------
 
+### Vue 進階篇 - SEO-Local head Settings
 
+子頁面擁有自己的設定，就在自己頁面中直接建立 head meta  即可 。
 
+```js
+<script>
+export default {
+  head: {
+    title: 'about page',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'about page description'
+      }
+    ],
+  }
+}
+</script>
+```
 
+如需要改變head 中的資料請用以下方式，改用方法回傳 head資料。
 
+```js
+head() {
+      return {
+        title: this.title,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Home page description'
+          }
+        ]
+      }
+    }
+```
 
-
-
+------
 
 
 
