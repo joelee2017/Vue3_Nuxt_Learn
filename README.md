@@ -184,5 +184,46 @@ server 端也是 beforeCreate 跟 created 階段的，並且在 client 端還會
 
 ------
 
+### Vue 進階篇 - SEO-Global head Settings
+
+重要設定都在 nuxt.config.js 
+
+設定詳細都在這  Global page headers: https://go.nuxtjs.dev/config-head
+
+```json
+  head: {
+    title: 'nuxt-test-joe',
+    htmlAttrs: {
+      lang: 'en'
+    },
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' }
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
+  },
+```
+
+
+
+------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
