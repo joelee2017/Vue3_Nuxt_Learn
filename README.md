@@ -174,9 +174,15 @@ activated  只有在使用  keep-alive 前提下才能使用，使用後進入�
     },
 ```
 
+------
 
+### Vue 進階篇 - fetch生命週期執行順序
 
+![image-20210523144156975](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20210523144156975.png)
 
+server 端也是 beforeCreate 跟 created 階段的，並且在 client 端還會在處理一次，所以要注意!!
+
+------
 
 
 
