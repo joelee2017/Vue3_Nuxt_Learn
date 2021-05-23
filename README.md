@@ -150,11 +150,29 @@ Fetch 提供的參數
 
 ------
 
+### Vue 進階篇 - fetch的狀態處理-4
 
+Caching 利用 keep-alive 把 component 內容先緩存起來，當Caching  後不斷切換時就不會重複打api 了。
 
+```vue
+<template>
+  <nuxt keep-alive />
+</template>
+```
 
+activated  只有在使用  keep-alive 前提下才能使用，使用後進入頁面時就會偵測是否與上一次相差30 秒若有就會自動執行。
 
+適用於時間超過後再執行。
 
+```js
+
+    activated() {
+      // Call fetch again if last fetch more than 30 sec ago
+      if (this.$fetchState.timestamp <= Date.now() - 30000) {
+        this.$fetch()
+      }
+    },
+```
 
 
 

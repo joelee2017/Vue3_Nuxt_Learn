@@ -6,7 +6,15 @@
     <header>
       <h1>header</h1>
     </header>
-    <Nuxt />
+    <div>
+      <div class="nav">
+        <div>
+          <NuxtLink to="/">Home</NuxtLink>
+          <NuxtLink to="/about">About</NuxtLink>
+        </div>
+      </div>
+    </div>
+    <Nuxt keep-alive />
     <footer>
       <h1>footer</h1>
     </footer>

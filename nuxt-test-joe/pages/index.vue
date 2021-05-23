@@ -20,7 +20,7 @@ export default {
  async fetch(){
     console.log('fetch=>',this.name);
     this.name = 'joe fetch';
-    this.res = await axios.get('https://vue-lessons-api.herokuapp.com/photo/list?status=error')
+    this.res = await axios.get('https://vue-lessons-api.herokuapp.com/photo/list')
     .then(res =>res.data);
 
   },
@@ -28,7 +28,13 @@ export default {
     handName(){
       this.name = 'joe3';
     }
-  }
+  },
+    activated() {
+      // Call fetch again if last fetch more than 30 sec ago
+      if (this.$fetchState.timestamp <= Date.now() - 10000) {
+        this.$fetch()
+      }
+    },
 }
 </script>
 <template>
